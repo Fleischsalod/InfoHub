@@ -13,6 +13,20 @@
     </head>
     <body>
         <h1>Hello World!</h1>
-        <p>You can send Mails from here.</p>
+        <p>You can send Mails from here.</p>       
+        <%
+            //
+        %>
+        
+        <!-- Auswahlfelder für Empfänger -->
+        
+        
+        
+        <!-- Textfeld -->
+        
+        
+        
+        <!-- Senden -->
+        
     </body>
 </html>

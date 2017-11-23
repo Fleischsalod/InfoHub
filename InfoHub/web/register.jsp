@@ -1,4 +1,5 @@
 <%@page import="Sender.DBConnector"%>
+<%@page import="Sender.DBCredentials"%>
 <%@page import="java.sql.ResultSetMetaData"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.SQLException"%>
@@ -32,10 +33,10 @@
 
             <div role="main" class="ui-content">
                 <form onsubmit="return checkForm(this);">
-                    <label for="basic">Name:</label>
-                    <input type="text" name="name" id="name" value="" data-mini="true" />
                     <label for="basic">Vorname:</label>
                     <input type="text" name="vorname" id="vorname" value="" data-mini="true" />
+                    <label for="basic">Name:</label>
+                    <input type="text" name="name" id="name" value="" data-mini="true" />
                     <label for="basic">Email:</label>
                     <input type="text" name="email" id="email" value="" data-mini="true" />
                     <label for="basic">Telefonnummer:</label>
@@ -62,8 +63,8 @@
 
             <div role="main" class="ui-content">
                 <%
-                    DBConnector con = new DBConnector();
-                    con.createSelector(out);
+                    DBConnector con = new DBConnector(DBCredentials.DBNAME, DBCredentials.DBUSER, DBCredentials.DBPW);
+                    con.connect();
                 %>
                 <p><a href="#foo">Zurück</a></p>
                 <input type="button" value="Registrieren" onclick='call()'>

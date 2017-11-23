@@ -6,6 +6,7 @@
 package Test;
 
 import Sender.MailSender;
+import Sender.SMSSender;
 import javax.mail.MessagingException;
 import javax.mail.Session;
 
@@ -14,19 +15,20 @@ import javax.mail.Session;
  * @author gotzwinterfeldt
  */
 public class TestMail {
-    
-    public static void main(String[] args){
-        
-        try{
-            MailSender send = new MailSender();
-            Session s = send.getGMailSession("service@westend61.de", "freibier#w61");
 
-            send.postMail(s,"graml.luis@web.de","Betreff","Nachrichteninhalt");
-        }
-        catch(Exception e){
+    public static void main(String[] args) {
+
+        try {
+            MailSender send = new MailSender();
+            Session s = send.getGMailSession("mail@dit.education", "Mail2017+1");
+
+            send.postMail(s, "graml.luis@web.de", "nix", "nix");
+            
+            SMSSender.sendSMS("und tschuees");
+            
+        } catch (Exception e) {
             System.out.println(e);
-        
         }
     }
-    
+
 }

@@ -3,7 +3,8 @@
     Created on : 06.11.2017, 21:07:29
     Author     : Winterfeldt
 --%>
-
+<%@page import="Sender.DBConnector"%>
+<%@page import="Sender.DBCredentials"%>
 <%@page import="java.sql.SQLException"%>
 <%@page import="java.sql.ResultSetMetaData"%>
 <%@page import="java.sql.ResultSet"%>
@@ -39,11 +40,11 @@
                     String tel = request.getParameter("tel");
                     String passwort = request.getParameter("passwort");
                     
+                    DBConnector dbc = new DBConnector(DBCredentials.DBNAME, DBCredentials.DBUSER, DBCredentials.DBPW);
+                    Statement stmt = dbc.connect();
+                    
                     try {
-                        Class.forName("com.mysql.jdbc.Driver");
-                        Connection conn = DriverManager.getConnection("jdbc:derby://localhost:1527/InfHub", "root", "root");
-                        Statement stmt = conn.createStatement();
-
+                        
                         stmt.executeUpdate("INSERT INTO anwender (name, vorname, email, telenum, passwd) VALUES('" + name + "', '" + vorname + "', '" + email + "', '" + tel + "', '" + passwort + "')");                       
 
                     } catch (Exception e) {

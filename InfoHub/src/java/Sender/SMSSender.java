@@ -26,9 +26,9 @@ public class SMSSender {
             System.out.println("+491728652312");
 
             SmsSubmissionResult[] responses = client.getSmsClient().submitMessage(new TextMessage(
-                    "+491728652312",
-                    "+491728652312",
-                    "Hello from Nexmo!"));
+                    "+491728652312", // Sender
+                    "+4915170000837", // Empfänger
+                    content));
             for (SmsSubmissionResult response : responses) {
                 System.out.println(response);
             }

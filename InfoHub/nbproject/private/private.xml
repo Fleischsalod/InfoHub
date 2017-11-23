@@ -3,12 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/Users/luisgraml/Documents/InfoHub/src/java/Sender/MailSender.java</file>
+            <file>file:/Users/luisgraml/Documents/InfoHub/src/java/Sender/SMSSender.java</file>
             <file>file:/Users/luisgraml/Documents/InfoHub/web/register.jsp</file>
             <file>file:/Users/luisgraml/Documents/InfoHub/web/index.html</file>
             <file>file:/Users/luisgraml/Documents/InfoHub/web/sendMail.jsp</file>
-            <file>file:/Users/luisgraml/Documents/InfoHub/test/Test/TestMail.java</file>
+            <file>file:/Users/luisgraml/Documents/InfoHub/src/java/Test/TestMail.java</file>
             <file>file:/Users/luisgraml/Documents/InfoHub/web/writeRegister.jsp</file>
             <file>file:/Users/luisgraml/Documents/InfoHub/src/java/Sender/DBConnector.java</file>
+            <file>file:/Users/luisgraml/Documents/InfoHub/src/java/Sender/DBCredentials.java</file>
             <file>file:/Users/luisgraml/Documents/InfoHub/web/validate.jsp</file>
         </group>
     </open-files>

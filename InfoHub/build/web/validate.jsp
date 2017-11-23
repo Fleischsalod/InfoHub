@@ -5,6 +5,7 @@
 --%>
 
 <%@page import="Sender.DBConnector"%>
+<%@page import="Sender.DBCredentials"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,7 +15,8 @@
     </head>
     <body>
         <%
-          DBConnector dbc = new DBConnector();
+          DBConnector dbc = new DBConnector(DBCredentials.DBNAME, DBCredentials.DBUSER, DBCredentials.DBPW);
+          dbc.connect();
           String vemail = request.getParameter("email");
           String vpasswd = request.getParameter("passwort");
           
