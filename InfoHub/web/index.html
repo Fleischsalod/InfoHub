@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Log In</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>  
+    </head>
+    <body>
+
+        <!-- Start of first page -->
+        <div data-role="page" id="foo">
+
+            <div data-role="header">
+                <h1>Log In</h1>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <form action="validate.jsp">
+                    <label for="basic">Email:</label>
+                    <input type="email" name="email" id="email" value="" data-mini="true" />
+                    <label for="basic">Passwort:</label>
+                    <input type="password" name="passwort" id="passwort" value="" data-mini="true" />
+                    <input type="submit" name="anmelden" id="anmelden" value="Anmelden" />                
+                    <input type="button" name="register" id="register" value="Registrieren" onclick="reg()"/>
+                </form>
+            </div><!-- /content -->
+
+            <div data-role="footer">
+                <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+        
+        <script language="javascript" type="text/javascript">
+        function reg(){
+            window.location.replace("register.jsp");
+        }
+        </script>
+        
+    </body>
+</html>
